@@ -11,12 +11,12 @@ import connectDB from "./Database/Db.js";
 
 env.config();
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000; // Default port if not specified in .env
 
 connectDB();
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public/uploads"));
+app.use(express.static("public/images"));
 
 app.use("/api/auth", authRouter);
 app.use("/api/department", departmentRouter);
@@ -25,6 +25,6 @@ app.use("/api/salary", salaryRouter);
 app.use("/api/leave", leaveRouter);
 app.use("/api/settings", settingsRouter);
 
-app.listen(port, (req, res) => {
-  console.log("Server listening", port);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });

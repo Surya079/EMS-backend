@@ -8,6 +8,8 @@ const connectDB = async () => {
     const Db = await mongoose.connect(DB_connection);
     console.log("MangoDB connected");
   } catch (error) {
+    console.log(error);
+
     console.log("Error while connecting Database");
   }
 };

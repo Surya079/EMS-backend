@@ -9,7 +9,7 @@ import { Department } from "../models/Department.js";
 const Storage = multer.diskStorage({
   // where the image should save
   destination: (req, file, callback) => {
-    callback(null, "public/uploads");
+    callback(null, "public/images");
   },
   //   how the image should save Ex:(23232003.png)
   filename: (req, file, callback) => {
