@@ -17,6 +17,9 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("public/images"));
+app.get("/", (req, res) => {
+  res.send("Welcome to Employee Management System");
+});
 
 app.use("/api/auth", authRouter);
 app.use("/api/department", departmentRouter);
