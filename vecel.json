@@ -18,6 +18,14 @@
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       }
+    },
+    {
+      "src": "/public/upload/(.*)",
+      "dest": "/public/upload/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }
