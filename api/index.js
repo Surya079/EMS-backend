@@ -1,13 +1,13 @@
 import express from "express";
 import env from "dotenv";
 import cors from "cors";
-import authRouter from "./routes/auth.js";
-import departmentRouter from "./routes/department.js";
-import employeeRouter from "./routes/employee.js";
-import salaryRouter from "./routes/salary.js";
-import leaveRouter from "./routes/leaves.js";
-import settingsRouter from "./routes/settings.js";
-import connectDB from "./Database/Db.js";
+import authRouter from "../routes/auth.js";
+import departmentRouter from "../routes/department.js";
+import employeeRouter from "../routes/employee.js";
+import salaryRouter from "../routes/salary.js";
+import leaveRouter from "../routes/leaves.js";
+import settingsRouter from "../routes/settings.js";
+import connectDB from "../Database/Db.js";
 
 env.config();
 const app = express();
