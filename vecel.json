@@ -14,18 +14,11 @@
       },
       "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "https://auth-frontend-pink.vercel.app",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type, Authorization"
       }
     },
-    {
-      "src": "/public/upload/(.*)",
-      "dest": "/public/upload/$1"
-    },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    }
+    { "src": "/(.*)", "dest": "/index.js" }
   ]
 }
