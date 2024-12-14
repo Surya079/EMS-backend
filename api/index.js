@@ -20,7 +20,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(express.static("public/images"));
+// app.use(express.static("public/images"));
 
 app.use("/api/auth", authRouter);
 app.use("/api/department", departmentRouter);
