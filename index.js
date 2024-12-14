@@ -14,7 +14,11 @@ const app = express();
 const port = process.env.PORT || 3000; // Default port if not specified in .env
 
 connectDB();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://ems-frontend-theta.vercel.app/",
+  })
+);
 app.use(express.json());
 app.use(express.static("public/images"));
 
