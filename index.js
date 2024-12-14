@@ -29,6 +29,4 @@ app.use("/api/salary", salaryRouter);
 app.use("/api/leave", leaveRouter);
 app.use("/api/settings", settingsRouter);
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+export default app;
