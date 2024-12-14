@@ -29,6 +29,9 @@ app.use("/api/salary", salaryRouter);
 app.use("/api/leave", leaveRouter);
 app.use("/api/settings", settingsRouter);
 
+app.get("/", (req, res) => {
+  res.json({ message: "Successfully running" });
+});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
